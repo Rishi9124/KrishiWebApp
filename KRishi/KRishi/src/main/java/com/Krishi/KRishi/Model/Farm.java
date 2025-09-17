@@ -13,19 +13,23 @@ import lombok.NoArgsConstructor;
 public class Farm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "FarmIDP")
+    @Column(name = "farmidp")
     Long id ;
 
 
 
-    @Column(name = "FarmSize")
+    @Column(name = "farmsize")
     String size ;
 
     @ManyToOne
-    @JoinColumn(name = "SoilIDF")
+    @JoinColumn(name = "soilidf")
     Soil soil;
     @ManyToOne
-     @JoinColumn(name = "IrrigationTypeIDF")
+     @JoinColumn(name = "irrigationtypeidf")
     IrrigationType irrigation ;
+
+    @ManyToOne
+    @JoinColumn(name = "profileidf")
+    Profile profile;
 
 }

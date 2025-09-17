@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/registration")
+
 public class RegistrationController {
 
 
@@ -19,10 +19,11 @@ public class RegistrationController {
     private RegistrationService registrationService;
 
     public RegistrationController(RegistrationService service){
-this.registrationService = service;
+
+        this.registrationService = service;
     }
 
-    @PostMapping
+    @PostMapping("/api/registration")
     public ResponseEntity<?> register(@RequestBody RegistrationRequestDto dto){
         Long userId = registrationService.register(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(userId);

@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 public class Soil {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "SoilIDP")
+    @Column(name = "soilidp")
     Long id ;
 
-    @Column(name = "Type")
+    @Column(name = "type")
     String type ;
 }

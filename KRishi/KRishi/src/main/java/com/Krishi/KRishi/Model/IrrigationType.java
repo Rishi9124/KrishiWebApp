@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tbiriigationType")
+@Table(name = "tbiriigationtype")
 public class IrrigationType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IriigationIDP")
+    @Column(name = "iriigationidp")
     private Long id ;
 
-    @Column(name = "IrrigationType")
+    @Column(name = "irrigationtype")
     String irrigationType;
 }

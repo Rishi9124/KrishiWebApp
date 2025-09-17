@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Data
 @Entity
@@ -13,24 +16,28 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "UserIDP")
+    @Column(name = "useridp")
     Long id ;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phonenumber")
     String phoneNumber;
 
-    @Column(name = "isVarified")
+    @Column(name = "isvarified")
     boolean isvarified ;
 
     @ManyToOne
-    @JoinColumn(name = "VillageIdf")
+    @JoinColumn(name = "Villageidf")
     Village village ;
 
     @ManyToOne
-    @JoinColumn(name = "FarmIdf")
+    @JoinColumn(name = "farmidf")
     Farm farm;
 
     @ManyToOne
-    @JoinColumn(name = "CropIdf")
+    @JoinColumn(name = "cropidf")
     Crop crop ;
+
+    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+    @Column(name = "cropsnowingdate" , nullable = true)
+    Date date;
 }

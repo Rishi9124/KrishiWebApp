@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 public class Village {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "VillageIDP")
+    @Column(name = "villageidp")
     Long id;
 
-    @Column(name = "VillageName")
+    @Column(name = "villagename")
     String name;
 
     @ManyToOne
-    @JoinColumn(name = "TalukaIdf")
+    @JoinColumn(name = "talukaidf")
     Taluka taluka;
 
 

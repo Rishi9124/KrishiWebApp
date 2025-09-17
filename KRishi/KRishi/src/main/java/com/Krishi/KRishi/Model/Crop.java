@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 public class Crop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CropIDP")
+    @Column(name = "cropidp")
     Long id ;
 
-    @Column(name = "CropName")
+    @Column(name = "cropname")
     String name;
 
 }

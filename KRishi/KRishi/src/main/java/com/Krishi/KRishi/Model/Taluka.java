@@ -11,18 +11,18 @@ import javax.naming.Name;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "tbTaluka")
+@Table(name = "tbtaluka")
 public class Taluka {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "TalukaIDP")
+    @Column(name = "talukaidp")
      private Long id ;
 
-    @Column(name = "TalukaName")
+    @Column(name = "talukaname")
     private String name ;
 
     @ManyToOne
-    @JoinColumn(name = "DistrictIDF")
+    @JoinColumn(name = "districtidf")
      District district ;
 }

@@ -62,6 +62,7 @@ public class RegistrationService {
 		farm.setSoil(soil);
 		farm.setSize(dto.getFarmSize());
 		farm.setIrrigation(irrigation);
+		farm.setProfile(profile);
 		farm = farmRepository.save(farm);
 
 		user.setFarm(farm);

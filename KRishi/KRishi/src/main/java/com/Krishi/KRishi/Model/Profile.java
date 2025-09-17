@@ -14,13 +14,15 @@ public class Profile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ProfileIDP")
+    @Column(name = "profileidp")
     Long  id ;
 
     @ManyToOne
-    @JoinColumn(name = "UserIDF")
+    @JoinColumn(name = "useridf")
     private User user;
 
-    @Column(name = "Name")
+    @Column(name = "name")
     String name ;
+
+
 }

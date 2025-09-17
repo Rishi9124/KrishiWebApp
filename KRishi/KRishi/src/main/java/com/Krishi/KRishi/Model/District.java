@@ -14,10 +14,10 @@ public class District {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "DistrictIDP")
+    @Column(name = "districtidp")
     Long id;
 
-    @Column(name = "DistrictName")
+    @Column(name = "districtname")
     String name ;
 
 
