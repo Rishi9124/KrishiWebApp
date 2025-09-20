@@ -6,5 +6,5 @@ import lombok.Setter;
 @Getter
 @Setter
 public class LoginRequestDto {
-    private String mobileNumber;
+    private String phoneNumber;
 }

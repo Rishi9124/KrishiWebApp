@@ -12,7 +12,7 @@ public class AuthanticationService {
    @Autowired
     private UserRepository userRepository ;
     public LoginResponseDto login(LoginRequestDto request){
-        User user = userRepository.findByMobileNumber(request.getMobileNumber())
+        User user = userRepository.findByPhoneNumber(request.getPhoneNumber())
                 .orElseThrow(() -> new RuntimeException("User not found with this mobile number"));
 
         if(!user.isIsvarified()){
@@ -24,7 +24,7 @@ public class AuthanticationService {
     }
 
     public void logout(LoginRequestDto request){
-        User user = userRepository.findByMobileNumber(request.getMobileNumber())
+        User user = userRepository.findByPhoneNumber(request.getPhoneNumber())
                 .orElseThrow(()-> new RuntimeException("User not found with this mobile number."));
 
         user.setIsvarified(false);

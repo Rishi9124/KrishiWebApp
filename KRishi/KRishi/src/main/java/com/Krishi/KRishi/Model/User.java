@@ -37,7 +37,7 @@ public class User {
     @JoinColumn(name = "cropidf")
     Crop crop ;
 
-    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+//    @DateTimeFormat(pattern = "dd-MM-yyyy ")
     @Column(name = "cropsnowingdate" , nullable = true)
-    Date date;
+    String  date;
 }

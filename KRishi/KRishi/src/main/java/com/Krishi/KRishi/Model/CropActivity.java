@@ -15,6 +15,8 @@ public class CropActivity {
     @Column(name = "cropactivityidp")
     private int id;
 
-    @Column(name = "activity")
-    private  String activity;
+    @Column(name = "activityname")
+    private  String activityName;
+
+
 }
